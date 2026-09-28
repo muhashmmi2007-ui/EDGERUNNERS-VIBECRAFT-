@@ -252,7 +252,7 @@ export default function FreeClassLocator({ onBack }) {
               </button>
             )}
             <span style={{ fontSize: 'var(--text-base)', fontWeight: 700, letterSpacing: '-0.01em', color: 'var(--text-primary)' }}>
-              Free Class Locator
+              Free Class Finder & Attendance Predictor
             </span>
           </div>
 
@@ -723,7 +723,7 @@ export default function FreeClassLocator({ onBack }) {
         color: 'var(--text-faint)',
       }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <span>Free Class Locator</span>
+          <span>Free Class Finder & Attendance Predictor</span>
           {datasetStatus && (
             <span>{datasetStatus.roomsDiscovered} rooms · {datasetStatus.sectionsIngested} sections</span>
           )}

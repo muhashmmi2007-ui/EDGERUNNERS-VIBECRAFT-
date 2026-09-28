@@ -382,7 +382,7 @@ export default function App({ onNavigateToLocator }) {
       }}>
         <div style={{ maxWidth: 1400, margin: '0 auto', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: 12 }}>
           <div>
-            <strong>THE ATTENDANCE PREDICTOR</strong> • Hackathon Finalist Edition
+            <strong>FREE CLASS FINDER & ATTENDANCE PREDICTOR</strong> • Final Edition
           </div>
           <div>
             Semester Dates: <strong>Aug 29, 2026 – Nov 29, 2026</strong> • 75% Mandatory Detention Threshold

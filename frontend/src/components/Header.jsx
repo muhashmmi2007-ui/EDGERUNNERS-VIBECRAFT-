@@ -54,12 +54,12 @@ export default function Header({
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
               <h1 style={{
-                fontSize: '1rem',
+                fontSize: '0.95rem',
                 fontWeight: 800,
                 letterSpacing: '-0.02em',
                 color: '#f1f5f9',
               }}>
-                ATTENDANCE PREDICTOR
+                FREE CLASS FINDER & ATTENDANCE PREDICTOR
               </h1>
               <span className="badge badge-emerald" style={{ fontSize: '0.6rem', padding: '1px 7px' }}>
                 v2
