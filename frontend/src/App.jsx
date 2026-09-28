@@ -23,7 +23,7 @@ const STORAGE_KEY_SECTION = 'attendx_selected_section_v2';
 const STORAGE_KEY_DATE = 'attendx_planning_date_v2';
 const STORAGE_PREFIX_ATTENDANCE = 'attendx_attendance_record_';
 
-export default function App() {
+export default function App({ onNavigateToLocator }) {
   // 1. Selected Section State
   const [selectedSection, setSelectedSection] = useState(() => {
     const saved = localStorage.getItem(STORAGE_KEY_SECTION);
@@ -200,6 +200,7 @@ export default function App() {
         onToggleTimetable={() => setShowTimetable((prev) => !prev)}
         showTimetable={showTimetable}
         onResetData={handleResetData}
+        onOpenLocator={onNavigateToLocator}
       />
 
       {/* Main App Container */}
@@ -386,7 +387,15 @@ export default function App() {
           <div>
             Semester Dates: <strong>Aug 29, 2026 – Nov 29, 2026</strong> • 75% Mandatory Detention Threshold
           </div>
-          <div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+            {onNavigateToLocator && (
+              <button
+                onClick={onNavigateToLocator}
+                style={{ background: 'transparent', border: 'none', color: 'var(--cyan-light)', cursor: 'pointer', textDecoration: 'underline', fontWeight: 600 }}
+              >
+                Free Class Locator ↗
+              </button>
+            )}
             <button
               onClick={() => setShowAuditModal(true)}
               style={{ background: 'transparent', border: 'none', color: '#38bdf8', cursor: 'pointer', textDecoration: 'underline' }}

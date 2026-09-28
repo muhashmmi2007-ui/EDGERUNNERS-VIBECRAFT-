@@ -1,6 +1,6 @@
 import React from 'react';
 import { SECTIONS_DATA } from '../data/sectionsData';
-import { Sparkles, Grid, RotateCcw, FileText } from 'lucide-react';
+import { Sparkles, Grid, RotateCcw, FileText, DoorOpen } from 'lucide-react';
 
 export default function Header({
   selectedSection,
@@ -12,6 +12,7 @@ export default function Header({
   onToggleTimetable,
   showTimetable,
   onResetData,
+  onOpenLocator,
 }) {
   return (
     <header style={{
@@ -145,7 +146,33 @@ export default function Header({
           </div>
 
           {/* Action Buttons */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+            {onOpenLocator && (
+              <button
+                onClick={onOpenLocator}
+                className="btn btn-secondary"
+                title="The Free Class Locator (Smart Search Floor Manager)"
+                style={{
+                  padding: '5px 12px',
+                  fontSize: '0.75rem',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 6,
+                  borderColor: 'rgba(6, 182, 212, 0.4)',
+                  color: 'var(--cyan-light)',
+                  background: 'rgba(6, 182, 212, 0.1)',
+                  fontWeight: 700,
+                  cursor: 'pointer',
+                }}
+              >
+                <DoorOpen size={14} color="var(--cyan-light)" />
+                <span>Free Classes</span>
+                <span className="badge badge-cyan" style={{ fontSize: '0.58rem', padding: '1px 5px' }}>
+                  NEW
+                </span>
+              </button>
+            )}
+
             <button
               onClick={onToggleTimetable}
               className="btn btn-secondary"
